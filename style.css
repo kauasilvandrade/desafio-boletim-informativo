@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+* {}
+
+body {}
+
+.conteudo {}
+
+.secaoFicarAtualizado {}
+
+.secaoFicarAtualizado h1 {}
+
+.secaoFicarAtualizado p {}
+
+.listaAtualizacaoMensal {}
+
+.listaAtualizacaoMensal__itemAtualizaoMensal {}
+
+.formEnviarEmail {}
+
+.formEnviarEmail label {}
+
+.formEnviarEmail input {}
+
+.formEnviarEmail button {}
+
+/* PÁGINA 2 = THANKS */
+.secaoThanks {}
+
+.secaoThanks img{}
+
+.secaoThanks h1{}
+
+.secaoThanks p{}
+
+.secaoThanks p strong{}
+
+.secaoThanks button{}
