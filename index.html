@@ -1,52 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  <!-- Sign-up form start -->
+  <main class="conteudo">
 
-  Stay updated!
+    <section class="secaoFicarAtualizado">
 
-  Join 60,000+ product managers receiving monthly updates on:
+      <h1>Stay updated!</h1>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
-  Email address
-  email@company.com
+      <ul class="listaAtualizacaoMensal">
 
-  Subscribe to monthly newsletter
+        <li class="listaAtualizacaoMensal__itemAtualizaoMensal">
+          Product discovery and building what matters
+        </li>
+        
+        <li class="listaAtualizacaoMensal__itemAtualizaoMensal">
+          Measuring to ensure updates are a success
+        </li>
+        
+        <li class="listaAtualizacaoMensal__itemAtualizaoMensal">
+          And much more!
+        </li>
 
-  <!-- Sign-up form end -->
+      </ul>
 
-  <!-- Success message start -->
+      <form action="#" class="formEnviarEmail">
 
-  Thanks for subscribing!
+        <label for="email">Email address</label>
+        <input type="email" name="email" id="email">
 
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
+        <button>Subscribe to monthly newsletter</button>
 
-  Dismiss message
+      </form>
 
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    </section>
+
+    <section class="secaoImagem">
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="Imagem Sempre manter atualiado">
+    </section>
+
+  </main>
+
 </body>
 </html>
