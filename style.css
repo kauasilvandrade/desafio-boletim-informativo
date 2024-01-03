@@ -11,16 +11,12 @@
     --charcoal-grey: hsl(235, 18%, 26%);
     --grey: hsl(231, 7%, 60%);
     --white: hsl(0, 0%, 100%);
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('assets/fonts/Roboto-Regular.ttf') format('truetype'), url('assets/fonts/Roboto-Bold.ttf') format('truetype');
+    --tomato: hsl(4, 100%, 67%);
 }
 
 body {
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    background-color: hsl(234, 29%, 20%);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark-slate-grey);
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -38,18 +34,23 @@ body {
 .secaoFicarAtualizado {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
-    padding: 2rem;
-    width: 31rem;
+    gap: 1.5rem;
+    padding: 3rem;
+    width: 34rem;
 }
 
-.secaoFicarAtualizado h1 {
-    font-size: 2.3em;
-    font-weight: 900;
+.secaoFicarAtualizado h1, 
+.secaoThanks h1 {
+    font-size: 3.3em;
+    font-weight: 700;
+    color: var(--dark-slate-grey);
 }
 
-.secaoFicarAtualizado p {
+.secaoFicarAtualizado p, .secaoThanks p {
     font-size: 1.2em;
+    color: var(--charcoal-grey);
+    font-weight: 400;
+    line-height: 1.5em;
 }
 
 .listaAtualizacaoMensal {
@@ -63,15 +64,52 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
+    color: var(--dark-slate-grey);
+    font-weight: 400;
 }
 
-.formEnviarEmail {}
+.formEnviarEmail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-.formEnviarEmail label {}
+.formEnviarEmail label {
+    color: var(--dark-slate-grey);
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 0.5rem;
+}
 
-.formEnviarEmail input {}
+.formEnviarEmail input, .formEnviarEmail button, 
+.secaoThanks button {
+    font-size: 1em;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+}
 
-.formEnviarEmail button {}
+.formEnviarEmail input {
+    margin-bottom: 1.4rem;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--charcoal-grey);
+}
+
+.formEnviarEmail button, 
+.secaoThanks button {
+    padding: 1.2rem 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    border: none;
+    transition: background-image .5s ease-in-out;
+}
+
+.formEnviarEmail button {
+    background-image: linear-gradient(to left, #dc8d53, #b74b63 41%);
+}
+.formEnviarEmail button:hover {
+    background-image: linear-gradient(45deg, var(--dark-slate-grey) 100%, transparent);
+}
 
 .secaoImagem {}
 
@@ -80,14 +118,24 @@ body {
 }
 
 /* PÁGINA 2 = THANKS */
-.secaoThanks {}
+.secaoThanks {
+    width: 30rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
-.secaoThanks img{}
+.secaoThanks img {
+    width: 3.5rem;
+}
 
-.secaoThanks h1{}
+.secaoThanks p strong {}
 
-.secaoThanks p{}
+.secaoThanks button {
+    background-image: linear-gradient(45deg, var(--dark-slate-grey) 100%, transparent);
+}
 
-.secaoThanks p strong{}
-
-.secaoThanks button{}
+.secaoThanks button:hover {
+    background-image: linear-gradient(to left, #dc8d53, #b74b63 41%);
+}
