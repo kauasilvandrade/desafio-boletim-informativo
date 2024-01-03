@@ -74,11 +74,25 @@ body {
     align-items: flex-start;
 }
 
-.formEnviarEmail label {
-    color: var(--dark-slate-grey);
+.formEnviarEmail .label-erro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.formEnviarEmail label, .formEnviarEmail .msgErro {
     font-weight: bold;
     font-size: 0.9em;
-    margin-bottom: 0.5rem;
+}
+
+.formEnviarEmail label {
+    color: var(--dark-slate-grey);
+}
+
+.formEnviarEmail .msgErro {
+    color: tomato;
 }
 
 .formEnviarEmail input, .formEnviarEmail button, 
@@ -93,6 +107,12 @@ body {
     margin-bottom: 1.4rem;
     padding: 0.8rem 1.5rem;
     border: 2px solid var(--charcoal-grey);
+}
+
+.formEnviarEmail input.erro {
+    background-color: hsl(4deg 44.71% 70.66% / 28%);
+    border: 2px solid tomato;
+    color: tomato;
 }
 
 .formEnviarEmail button, 
@@ -138,4 +158,40 @@ body {
 
 .secaoThanks button:hover {
     background-image: linear-gradient(to left, #dc8d53, #b74b63 41%);
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 1008px) { 
+    body {
+        height: 100%;
+    }
+
+    .conteudo {
+        width: 100%;
+        border-radius: 0px;
+        height: 100vh;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .secaoFicarAtualizado {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 420px) { 
+
+    .conteudo {
+        padding: 0;
+        height: 100%;
+    }
+
+    .secaoFicarAtualizado h1, .secaoThanks h1 {
+        font-size: 2.5em;
+    }
+
+    .secaoImagem img {
+        border-radius: 0px;
+        width: 17rem;
+    }
 }

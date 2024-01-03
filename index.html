@@ -36,22 +36,32 @@
 
       </ul>
 
-      <form action="#" class="formEnviarEmail">
+      <form action="#" class="formEnviarEmail" onsubmit="return false">
 
-        <label for="email">Email address</label>
-        <input type="email" name="email" id="email">
+        <div class="label-erro">
+          <label for="email">Email address</label>
+          <span></span>
+        </div>
 
-        <button>Subscribe to monthly newsletter</button>
+        <input type="text" name="email" id="email">
+
+        <button onclick="Mostrar()">Subscribe to monthly newsletter</button>
 
       </form>
 
     </section>
 
     <section class="secaoImagem">
-      <img src="assets/images/illustration-sign-up-desktop.svg" alt="Imagem Sempre manter atualiado">
+      <picture>
+        <!-- <source media="(max-width: 1000px)" srcset="assets/images/illustration-sign-up-desktop.svg" type="image/svg"> -->
+        <source media="(max-width: 1008px)" srcset="assets/images/illustration-sign-up-mobile.svg">
+        <img src="assets/images/illustration-sign-up-desktop.svg" alt="">
+      </picture>
     </section>
 
   </main>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
