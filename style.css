@@ -169,7 +169,6 @@ body {
     .conteudo {
         width: 100%;
         border-radius: 0px;
-        height: 100vh;
         flex-direction: column-reverse;
         justify-content: center;
     }
