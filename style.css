@@ -19,7 +19,6 @@ body {
     background-color: var(--dark-slate-grey);
     display: flex;
     justify-content: center;
-    height: 100vh;
     align-items: center;
 }
 
@@ -106,7 +105,12 @@ body {
 .formEnviarEmail input {
     margin-bottom: 1.4rem;
     padding: 0.8rem 1.5rem;
-    border: 2px solid var(--charcoal-grey);
+    border: 2px solid hsl(235deg 18% 26% / 48%);
+    outline: none;
+}
+.formEnviarEmail input.erro:focus {
+    border: 2px solid tomato;
+    color: tomato;
 }
 
 .formEnviarEmail input.erro {
@@ -122,13 +126,11 @@ body {
     color: var(--white);
     border: none;
     transition: background-image .5s ease-in-out;
+    background-image: linear-gradient(45deg, var(--dark-slate-grey) 100%, transparent);
 }
 
-.formEnviarEmail button {
+.formEnviarEmail button:hover, .secaoThanks button:hover  {
     background-image: linear-gradient(to left, #dc8d53, #b74b63 41%);
-}
-.formEnviarEmail button:hover {
-    background-image: linear-gradient(45deg, var(--dark-slate-grey) 100%, transparent);
 }
 
 .secaoImagem {}
@@ -152,15 +154,13 @@ body {
 
 .secaoThanks p strong {}
 
-.secaoThanks button {
-    background-image: linear-gradient(45deg, var(--dark-slate-grey) 100%, transparent);
-}
-
-.secaoThanks button:hover {
-    background-image: linear-gradient(to left, #dc8d53, #b74b63 41%);
-}
-
 /* RESPONSIVIDADE */
+@media screen and (min-width: 1367px) {
+    body {
+        height: 100vh;
+    }
+}
+
 @media screen and (max-width: 1008px) { 
     body {
         height: 100%;
