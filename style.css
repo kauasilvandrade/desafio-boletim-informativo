@@ -20,6 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .conteudo {
@@ -155,18 +156,10 @@ body {
 .secaoThanks p strong {}
 
 /* RESPONSIVIDADE */
-@media screen and (min-width: 1367px) {
-    body {
-        height: 100vh;
-    }
-}
-
 @media screen and (max-width: 1008px) { 
-    body {
-        height: 100%;
-    }
 
     .conteudo {
+        height: 100%;
         width: 100%;
         border-radius: 0px;
         flex-direction: column-reverse;
